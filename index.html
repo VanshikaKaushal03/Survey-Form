@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bollywood Movie Survey</title>
+    <!-- Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS: Linked to an external stylesheet. In a real project, this would be 'style.css'. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="text-center">
+            <h1 class="display-4">Lights, Camera, Bollywood! 🎬</h1>
+            <p class="lead text-white-50">Share Your Bollywood Faves with Us!</p>
+        </header>
+
+        <!-- Introduction Section -->
+        <section class="mb-4">
+            <p>Welcome, cinephile! Are you ready to dive into the vibrant world of Bollywood? From iconic blockbusters to timeless classics, we want to hear all about your cinematic journey. Your insights will help us understand what makes Bollywood truly magical for you. Let's get started!</p>
+            <p class="text-muted fst-italic">This survey is quick, fun, and completely anonymous.</p>
+        </section>
+
+        <!-- Survey Form Section -->
+        <form id="bollywoodSurveyForm">
+            <h2 class="text-center mb-4" style="color: #1e81a2;">Your Bollywood Preferences</h2>
+
+            <!-- Text Field: Your Name (No longer optional) -->
+            <div class="mb-3">
+                <label for="userName" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="userName" placeholder="Enter your name">
+            </div>
+
+            <!-- New Field: Email -->
+            <div class="mb-3">
+                <label for="userEmail" class="form-label">Your Email</label>
+                <input type="email" class="form-control" id="userEmail" placeholder="e.g., yourname@example.com">
+            </div>
+
+            <!-- New Field: Phone Number -->
+            <div class="mb-3">
+                <label for="userPhone" class="form-label">Your Phone Number</label>
+                <input type="tel" class="form-control" id="userPhone" placeholder="e.g., +91 12345 67890">
+            </div>
+
+            <!-- New Field: Age Group -->
+            <div class="mb-3">
+                <label for="userAgeGroup" class="form-label">Your Age Group</label>
+                <select class="form-select" id="userAgeGroup">
+                    <option selected disabled value="">Select your age group</option>
+                    <option value="Under 18">Under 18</option>
+                    <option value="18-24">18-24</option>
+                    <option value="25-34">25-34</option>
+                    <option value="35-44">35-44</option>
+                    <option value="45-54">45-54</option>
+                    <option value="55+">55+</option>
+                </select>
+            </div>
+
+            <!-- Text Field: Favorite Bollywood Movie -->
+            <div class="mb-3">
+                <label for="favoriteMovie" class="form-label">What's your all-time favorite Bollywood movie?</label>
+                <input type="text" class="form-control" id="favoriteMovie" placeholder="e.g., Dilwale Dulhania Le Jayenge">
+            </div>
+
+            <!-- Checkboxes: Favorite Genres -->
+            <div class="mb-3">
+                <label class="form-label">Which genres do you enjoy most in Bollywood?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Romance" id="genreRomance">
+                    <label class="form-check-label" for="genreRomance">Romance</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Action" id="genreAction">
+                    <label class="form-check-label" for="genreAction">Action</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Drama" id="genreDrama">
+                    <label class="form-check-label" for="genreDrama">Drama</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Comedy" id="genreComedy">
+                    <label class="form-check-label" for="genreComedy">Comedy</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Musical" id="genreMusical">
+                    <label class="form-check-label" for="genreMusical">Musical</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Thriller" id="genreThriller">
+                    <label class="form-check-label" for="genreThriller">Thriller</label>
+                </div>
+            </div>
+
+            <!-- New Question 1: Favorite Bollywood Actor -->
+            <div class="mb-3">
+                <label class="form-label">Who is your favorite Bollywood actor?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="favoriteActorRadio" id="actorSRK" value="Shah Rukh Khan">
+                    <label class="form-check-label" for="actorSRK">Shah Rukh Khan</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="favoriteActorRadio" id="actorSalman" value="Salman Khan">
+                    <label class="form-check-label" for="actorSalman">Salman Khan</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="favoriteActorRadio" id="actorAamir" value="Aamir Khan">
+                    <label class="form-check-label" for="actorAamir">Aamir Khan</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="favoriteActorRadio" id="actorRanbir" value="Ranbir Kapoor">
+                    <label class="form-check-label" for="actorRanbir">Ranbir Kapoor</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="favoriteActorRadio" id="actorOther" value="Other">
+                    <label class="form-check-label" for="actorOther">Other:</label>
+                    <input type="text" class="form-control mt-2" id="otherActorName" placeholder="Specify other actor">
+                </div>
+            </div>
+
+            <!-- New Question 2: Favorite Bollywood Actress -->
+            <div class="mb-3">
+                <label class="form-label">Who is your favorite Bollywood actress?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="favoriteActressRadio" id="actressDeepika" value="Deepika Padukone">
+                    <label class="form-check-label" for="actressDeepika">Deepika Padukone</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="favoriteActressRadio" id="actressAlia" value="Alia Bhatt">
+                    <label class="form-check-label" for="actressAlia">Alia Bhatt</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="favoriteActressRadio" id="actressPriyanka" value="Priyanka Chopra">
+                    <label class="form-check-label" for="actressPriyanka">Priyanka Chopra</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="favoriteActressRadio" id="actressKareena" value="Kareena Kapoor Khan">
+                    <label class="form-check-label" for="actressKareena">Kareena Kapoor Khan</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="favoriteActressRadio" id="actressOther" value="Other">
+                    <label class="form-check-label" for="actressOther">Other:</label>
+                    <input type="text" class="form-control mt-2" id="otherActressName" placeholder="Specify other actress">
+                </div>
+            </div>
+
+            <!-- New Question 3: Old songs vs New songs -->
+            <div class="mb-3">
+                <label class="form-label">Old songs vs New songs – what do you prefer?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="songPreference" id="songsOld" value="Old Bollywood songs (70s–90s)">
+                    <label class="form-check-label" for="songsOld">Old Bollywood songs (70s–90s)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="songPreference" id="songsNew" value="New Bollywood songs (2000–present)">
+                    <label class="form-check-label" for="songsNew">New Bollywood songs (2000–present)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="songPreference" id="songsBoth" value="Both equally">
+                    <label class="form-check-label" for="songsBoth">Both equally</label>
+                </div>
+            </div>
+
+            <!-- New Question 4: If Bollywood made a movie about your life, who should play you? -->
+            <div class="mb-3">
+                <label class="form-label">If Bollywood made a movie about your life, who should play you?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="playYou" id="playYouSRK" value="Shah Rukh Khan">
+                    <label class="form-check-label" for="playYouSRK">Shah Rukh Khan</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="playYou" id="playYouRanbir" value="Ranbir Kapoor">
+                    <label class="form-check-label" for="playYouRanbir">Ranbir Kapoor</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="playYou" id="playYouAlia" value="Alia Bhatt">
+                    <label class="form-check-label" for="playYouAlia">Alia Bhatt</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="playYou" id="playYouKriti" value="Kriti Sanon">
+                    <label class="form-check-label" for="playYouKriti">Kriti Sanon</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="playYou" id="playYouOther" value="Other">
+                    <label class="form-check-label" for="playYouOther">Other:</label>
+                    <input type="text" class="form-control mt-2" id="otherPlayYouName" placeholder="Specify other actor/actress">
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Submit Your Bollywood Love! ✨</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper (for JS components, though not strictly needed for this simple form) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        // Form submission handling
+        document.getElementById('bollywoodSurveyForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // In a real application, you would collect form data and send it to a server.
+            // For this example, we'll just log it to the console for demonstration purposes.
+            const userName = document.getElementById('userName').value;
+            const userEmail = document.getElementById('userEmail').value;
+            const userPhone = document.getElementById('userPhone').value;
+            const userAgeGroup = document.getElementById('userAgeGroup').value;
+            const favoriteMovie = document.getElementById('favoriteMovie').value;
+
+            const selectedGenres = [];
+            document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
+                selectedGenres.push(checkbox.value);
+            });
+
+            let favoriteActor = document.querySelector('input[name="favoriteActorRadio"]:checked')?.value || '';
+            if (favoriteActor === 'Other') {
+                favoriteActor = document.getElementById('otherActorName').value;
+            }
+
+            let favoriteActress = document.querySelector('input[name="favoriteActressRadio"]:checked')?.value || '';
+            if (favoriteActress === 'Other') {
+                favoriteActress = document.getElementById('otherActressName').value;
+            }
+
+            const songPreference = document.querySelector('input[name="songPreference"]:checked')?.value || '';
+
+            let playYouActor = document.querySelector('input[name="playYou"]:checked')?.value || '';
+            if (playYouActor === 'Other') {
+                playYouActor = document.getElementById('otherPlayYouName').value;
+            }
+
+            const memorableDialogue = document.getElementById('memorableDialogue').value;
+
+            console.log('Survey Data Submitted:');
+            console.log('Name:', userName);
+            console.log('Email:', userEmail);
+            console.log('Phone Number:', userPhone);
+            console.log('Age Group:', userAgeGroup);
+            console.log('Favorite Movie:', favoriteMovie);
+            console.log('Favorite Genres:', selectedGenres);
+            console.log('Favorite Actor:', favoriteActor);
+            console.log('Favorite Actress:', favoriteActress);
+            console.log('Song Preference:', songPreference);
+            console.log('Actor to play you:', playYouActor);
+            console.log('Memorable Dialogue:', memorableDialogue);
+
+            // Redirect to the thank you page after logging data
+            window.location.href = 'thank_you.html';
+        });
+    </script>
+</body>
+</html>

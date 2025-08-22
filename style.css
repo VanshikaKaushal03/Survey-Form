@@ -1,0 +1,118 @@
+/* General Body Styles */
+body {
+    font-family: 'Times New Roman', serif; /* Changed font to Times New Roman */
+    /* Changed background to a new fun yet elegant gradient */
+    background: linear-gradient(to right, #e0f2f7, #c1e4e9); /* Soft blue-green gradient */
+    color: #4a4a4a;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: #6bbcb9; /* Muted teal */
+    padding: 20px 0;
+    border-bottom: 5px solid #6bbcb9; /* Deeper teal */
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #fff; /* White text for contrast */
+    text-shadow: 2px 2px 4px rgba(13, 22, 208, 0);
+    font-weight: bold;
+}
+
+/* Section Styling (Introduction) */
+section {
+    background-color: #edf7f8; /* Very light blue-green */
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff; /* Pure white for clean form */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.form-label {
+    color: #1e81a2; /* A pleasant green */
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #98d8c8; /* Soft green border */
+    padding: 10px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #6bbcb9; /* Focus highlight */
+    box-shadow: 0 0 0 0.25rem rgba(107, 188, 185, 0.25);
+}
+
+/* Checkbox and Radio Button Styling */
+.form-check-label {
+    color: #00020bd4; /* Royal blue for contrast */
+}
+
+.form-check-input:checked {
+    background-color: #6bbcb9; /* Checked color */
+    border-color: #6bbcb9;
+}
+
+/* Submit Button Styling */
+.btn-primary {
+    background-color: #6bbcb9; /* Vibrant button color */
+    border-color: #6bbcb9;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #5aa19f; /* Darker on hover */
+    border-color: #5aa19f;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Responsive Adjustments (Bootstrap handles most, but custom touches) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    section, form {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .btn-primary {
+        width: 100%; /* Full width button on small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+}
